@@ -1,0 +1,83 @@
+
+.bank-title{
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: lightcoral;
+    color: palevioletred;
+}
+#login-page{
+    margin: 100px;
+    background-color: #e11d74;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 15px 15px 10px gray;
+}
+.login-title{
+    color: white;
+}
+.submit-area input{
+    width: 50%;
+    height: 40px;
+    margin-top: 20px;
+    background-color: #f4dada;
+    border: none;
+    border: 1px solid gray;
+    border-radius: 10px;
+    transition: 2s;
+    
+}
+.submit-area input:hover{
+    width: 80%;
+}
+.submit-area .btn{
+    padding: 5px 20px;
+    margin-top: 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 2s;
+    background-color: #eaef9b;
+    color: hotpink;
+    font-weight: bold;
+}
+.submit-area .btn:hover{
+    transform: scale(1.3);
+}
+
+#transaction-page{
+    display: none;
+}
+
+.status{
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+.deposit{
+    background-color: violet;
+}
+.withdraw{
+    background-color: tomato;
+}
+.balance{
+    background-color: turquoise;
+}
+.transation-input{
+    width: 100%;
+    height: 40px;
+    background-color: #f4dada;
+    border: none;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+.transation-box{
+    margin: 50px;
+    background-color: pink;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 5px gray;
+
+}
+.transation-box button{
+    margin-top: 20px;
+}
