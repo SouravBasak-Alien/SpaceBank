@@ -10,8 +10,11 @@ const loginBtn = document.getElementById('loginBtn').addEventListener('click', f
 const DepositButton = document.getElementById('depositBtn').addEventListener("click", function (){
     const depositAmount = document.getElementById('depositAmount').value;
     depositNumber = parseFloat(depositAmount);
-
-    const depositNumUpdate = document.getElementById('depositUpdate').innerText;
+    if (depositAmount <0){
+        alert("enter positive value")
+    }
+    else{
+        const depositNumUpdate = document.getElementById('depositUpdate').innerText;
      depositUpdateNumber = parseFloat(depositNumUpdate);
 
     const totalDeposit = depositNumber + depositUpdateNumber;
@@ -28,9 +31,8 @@ const DepositButton = document.getElementById('depositBtn').addEventListener("cl
     document.getElementById('balanceUpdate').innerText = totalBalance;
 
     //deposit add balance end;
-
-
-
+    }
+    
 
 
 })
@@ -42,28 +44,28 @@ const DepositButton = document.getElementById('depositBtn').addEventListener("cl
 const withdrawButton = document.getElementById('withdrawBtn').addEventListener('click' ,function (){
     const withdrawAmount = document.getElementById('withdrawAmount').value;
     withdrawNumber= parseFloat(withdrawAmount);
-
-    const withdrawUpadate = document.getElementById('withdrawUpdate').innerText;
-    withdrawUpadateNumber = parseFloat(withdrawUpadate);
-
-    const totalWithdraw = withdrawNumber +  withdrawUpadateNumber;
-
-    document.getElementById('withdrawUpdate').innerText = totalWithdraw;
-     document.getElementById('withdrawAmount').value = '';
-
-
-
-     const balance = document.getElementById('balanceUpdate').innerText;
-     balanceNumber = parseFloat(balance);
-     
-     const totalBalance = balanceNumber - withdrawNumber;
-     document.getElementById('balanceUpdate').innerText = totalBalance;
+    if(withdrawAmount<0){
+        alert("enter positive value")
+    }
+    else{
+        const withdrawUpadate = document.getElementById('withdrawUpdate').innerText;
+        withdrawUpadateNumber = parseFloat(withdrawUpadate);
     
+        const totalWithdraw = withdrawNumber +  withdrawUpadateNumber;
+    
+        document.getElementById('withdrawUpdate').innerText = totalWithdraw;
+         document.getElementById('withdrawAmount').value = '';
+    
+         const balance = document.getElementById('balanceUpdate').innerText;
+         balanceNumber = parseFloat(balance);
+         
+         const totalBalance = balanceNumber - withdrawNumber;
+         document.getElementById('balanceUpdate').innerText = totalBalance;
 
-
-
-
-    alert('You are withdrawing' + " " + withdrawNumber + " "  +  'Taka')
- 
+    
+        alert('You are withdrawing' + " " + withdrawNumber + " "  +  'Taka')
+     
+    }
+  
 
 })
